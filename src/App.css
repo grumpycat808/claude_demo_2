@@ -1,0 +1,263 @@
+.app {
+  min-height: 100vh;
+  background-color: #3a3a3a;
+  color: white;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+}
+
+.title {
+  font-size: 4rem;
+  font-weight: 900;
+  margin: 0;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: #e8e8e8;
+  text-shadow:
+    -3px -3px 0 #2a2a2a,
+    3px -3px 0 #2a2a2a,
+    -3px 3px 0 #2a2a2a,
+    3px 3px 0 #2a2a2a,
+    -6px -6px 0 #1a1a1a,
+    6px -6px 0 #1a1a1a,
+    -6px 6px 0 #1a1a1a,
+    6px 6px 0 #1a1a1a,
+    6px 6px 12px rgba(0, 0, 0, 0.7);
+}
+
+.barbell-container {
+  position: relative;
+  width: 100%;
+  max-width: 800px;
+  margin: 2rem 0;
+}
+
+.total-display {
+  position: absolute;
+  top: -20px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: rgba(58, 58, 58, 0.9);
+  border: 2px solid #666;
+  border-radius: 8px;
+  padding: 0.5rem 1.5rem;
+  text-align: center;
+  z-index: 10;
+  min-width: 150px;
+}
+
+.total-number {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #4db8ff;
+}
+
+.total-unit {
+  font-size: 1.2rem;
+  color: #4db8ff;
+}
+
+.total-label {
+  font-size: 0.8rem;
+  color: #999;
+  letter-spacing: 0.1em;
+}
+
+.barbell {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0;
+  padding: 2rem 0;
+  min-height: 180px;
+}
+
+.barbell-side {
+  display: flex;
+  gap: 4px;
+  align-items: center;
+}
+
+.barbell-bar {
+  width: 200px;
+  height: 12px;
+  background: linear-gradient(180deg, #888 0%, #555 50%, #888 100%);
+  border-radius: 2px;
+  margin: 0 8px;
+}
+
+.plate {
+  width: 20px;
+  background-color: #6b6b6b;
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-weight: bold;
+  font-size: 0.75rem;
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+  position: relative;
+}
+
+.plate-label {
+  writing-mode: vertical-rl;
+  text-orientation: mixed;
+  transform: rotate(180deg);
+}
+
+.controls {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  width: 100%;
+  max-width: 600px;
+}
+
+.weight-inputs {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.weight-inputs > label {
+  font-size: 1.5rem;
+  font-weight: 600;
+  text-align: center;
+}
+
+.input-group {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+}
+
+.weight-input {
+  flex: 1;
+  max-width: 250px;
+  padding: 1rem;
+  font-size: 1.2rem;
+  background-color: #4a4a4a;
+  border: 2px solid #cc6600;
+  border-radius: 8px;
+  color: white;
+  text-align: center;
+}
+
+.weight-input::placeholder {
+  color: #888;
+}
+
+.weight-input:focus {
+  outline: none;
+  border-color: #ff8800;
+}
+
+.options-row {
+  display: flex;
+  gap: 3rem;
+  justify-content: center;
+}
+
+.option-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.option-group > label {
+  font-size: 1.2rem;
+  font-weight: 600;
+  text-align: center;
+}
+
+.radio-group {
+  display: flex;
+  gap: 1rem;
+}
+
+.radio-label {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  cursor: pointer;
+  font-size: 1.1rem;
+}
+
+.radio-label input[type="radio"] {
+  appearance: none;
+  width: 20px;
+  height: 20px;
+  border: 2px solid #666;
+  border-radius: 50%;
+  background-color: transparent;
+  cursor: pointer;
+  position: relative;
+}
+
+.radio-label input[type="radio"]:checked {
+  border-color: #cc6600;
+}
+
+.radio-label input[type="radio"]:checked::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: #cc6600;
+}
+
+.calculate-btn {
+  padding: 1.2rem 3rem;
+  font-size: 1.8rem;
+  font-weight: 700;
+  background-color: #4a4a4a;
+  color: white;
+  border: 3px solid #cc6600;
+  border-radius: 12px;
+  cursor: pointer;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  transition: all 0.2s;
+}
+
+.calculate-btn:hover {
+  background-color: #555;
+  border-color: #ff8800;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.calculate-btn:active {
+  transform: translateY(0);
+}
+
+@media (max-width: 768px) {
+  .title {
+    font-size: 2.5rem;
+  }
+
+  .options-row {
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+
+  .input-group {
+    flex-direction: column;
+  }
+
+  .weight-input {
+    max-width: 100%;
+  }
+
+  .barbell-bar {
+    width: 100px;
+  }
+}
