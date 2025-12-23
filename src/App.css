@@ -226,6 +226,9 @@
   text-transform: uppercase;
   letter-spacing: 0.05em;
   transition: all 0.2s;
+  max-width: calc(500px + 1rem);
+  width: 100%;
+  align-self: center;
 }
 
 .calculate-btn:hover {
